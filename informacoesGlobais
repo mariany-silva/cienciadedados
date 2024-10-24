@@ -4,6 +4,11 @@ async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
     const dados = res.json()
     console.log(dados);
-}
+    const paragrafo = document.createElementent('p')
+    paragrafo.classList.add('graficos-container__texto')
+    paragrafo.innerHTML  = `Vocês sabia que o mundo tem ${dados.total_pessoas_mundo} de pessoas e que aproximadamente ${dados.total_pessoas_conectadas} estão conectadas em alguma rede social e passam em média ${dados.tempo-medio} horas conectadadas`
+    console.log(dados)
+
+    }
 
 vizualizarInformacoesGlobais()
